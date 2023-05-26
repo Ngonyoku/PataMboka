@@ -9,7 +9,11 @@ class ListingController extends Controller
 {
     // Show all Listings
     public function index() {
-        return view('listings.index', ['listings' => Listing::all()]);
+        // dd(request('tag')); # Die Dump function
+        $listing = Listing::latest()->filter(request(['tag', 'search']))->get(); #
+        return view('listings.index', [
+            'listings' => $listing
+        ]);
     }
 
     //Show single listing
