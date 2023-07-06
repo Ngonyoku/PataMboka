@@ -9,7 +9,7 @@
             @foreach($listings as $listing)
                 {{-- Takes in the Listing prop --}}
                 <x-listing-card :listing="$listing" /> 
-            @endforeach;
+            @endforeach
         @else
             <p>No Listings Found!</p>
         @endunless   

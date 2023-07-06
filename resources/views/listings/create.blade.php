@@ -5,9 +5,9 @@
     <x-card class="p-10 rounded max-w-lg mx-auto mt-24">
         <header class="text-center">
             <h2 class="text-2xl font-bold uppercase mb-1">
-                Create a Gig
+                Post a Job
             </h2>
-            <p class="mb-4">Post a gig to find a developer</p>
+            <p class="mb-4">Post a job and get hires!</p>
         </header>
 
         <form action="/listings" method="POST">

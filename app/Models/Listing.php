@@ -9,7 +9,8 @@ class Listing extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'company', 'location', 'website', 'email', 'description', 'tags'];
+    // Is required for form submission
+    // protected $fillable = ['title', 'company', 'location', 'website', 'email', 'description', 'tags'];
 
     // Filter By Tags
     public function scopeFilter($query, array $filters) {
@@ -30,7 +31,8 @@ class Listing extends Model
                         'tags',
                         'like', 
                         '%' . request('search') . '%'
-                    ); //Searches for the search query entered
+                    )
+            ; //Searches for the search query entered
         }
     }
 }
