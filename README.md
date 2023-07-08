@@ -1,66 +1,49 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Simple Job Posting Listing Website
 
-## About Laravel
+![Home Page](/images/home-page.png)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Description
+This is a simple job posting listing website built using Laravel. It allows employers to post job vacancies, and job seekers can browse and apply for those jobs. The website incorporates features such as scope filtering, authentication/authorization, and user-friendly interfaces.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Technologies Used
+- Laravel (laravel 9): A powerful PHP framework for web application development.
+- TailWind CSS: A utility-first CSS framework for building responsive and stylish user interfaces.
+- Blade Templates: Laravel's templating engine for creating dynamic views.
+- Eloquent Models: Laravel's ORM for interacting with the database.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Screenshots
+1. Home Page
+   ![Home Page](/images/home-page.png)
 
-## Learning Laravel
+2. Register and Login Pages
+   ![Register Page](/images/register-page.png)
+   ![Login Page](/images/login-page.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+3. Manage Listing Page
+   ![Manage Listing Page](/images/manage-listing-page.png)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+4. Create Listing Page
+   ![Create Listing Page](/images/create-listing-page.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Features
+- User Registration and Authentication: Users can create an account and log in to the website.
+- Scope Filtering: Job listings can be filtered based on different criteria such as job title, location, or category.
+- Create and Manage Job Listings: Employers can create job listings and manage them through an intuitive interface.
+- Apply for Jobs: Job seekers can apply for jobs directly through the website.
 
-## Laravel Sponsors
+## Installation and Usage
+1. Clone the repository.
+2. Install the dependencies by running `composer install` and `npm install`.
+3. Configure the database settings in the `.env` file.
+4. Run the migrations and seed the database with sample data using `php artisan migrate --seed`.
+5. Start the development server with `php artisan serve`.
+6. Visit `http://localhost:8000` in your web browser to access the website.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Credits
+This project was developed by Ngonyoku. Feel free to contribute, report issues, or submit feature requests.
+I followed the following tutorial on youtube by Traversey Media: https://www.youtube.com/watch?v=EU7PRmCpx-0&list=PLillGF-RfqbYhQsN5WMXy6VsDMKGadrJ-
 
 ## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is licensed under the [MIT License](LICENSE).
