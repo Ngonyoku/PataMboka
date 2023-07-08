@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\ListingController;
+use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Listing;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ListingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +37,22 @@ Route::get(LISTINGS.'/{listing}',[ListingController::class, 'show']);
 
 //Update Listing
 Route::put(LISTINGS . '/{listing}',[ListingController::class, 'update']);
+
+//Show register create form
+Route::get('/register', [UserController::class, 'create']);
+
+//Create Users (Register)
+Route::post('/users', [UserController::class, 'store']);
+
+//Login Form
+Route::get('/login',[UserController::class, 'login']);
+
+//Logout User
+Route::post('/logout',[UserController::class, 'logout']);
+
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+
 
 // Common Resources
 # index - Display All Listings
