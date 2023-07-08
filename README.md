@@ -25,7 +25,7 @@ This is a simple job posting listing website built using Laravel. It allows empl
    ![Manage Listing Page](https://github.com/Ngonyoku/PataMboka/blob/master/screenshots/manage-listings.png)
 
 4. Create Listing Page
-   ![Create Listing Page](/images/create-listing-page.png)
+   ![Post Job Listing Page](https://github.com/Ngonyoku/PataMboka/blob/master/screenshots/post.png)
 
 ## Features
 - User Registration and Authentication: Users can create an account and log in to the website.
