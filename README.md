@@ -2,7 +2,7 @@
 
 # Simple Job Posting Listing Website
 
-![Home Page](/images/home-page.png)
+![Home Page](https://github.com/Ngonyoku/PataMboka/blob/master/screenshots/home.png)
 
 ## Description
 This is a simple job posting listing website built using Laravel. It allows employers to post job vacancies, and job seekers can browse and apply for those jobs. The website incorporates features such as scope filtering, authentication/authorization, and user-friendly interfaces.
@@ -15,14 +15,14 @@ This is a simple job posting listing website built using Laravel. It allows empl
 
 ## Screenshots
 1. Home Page
-   ![Home Page](/images/home-page.png)
+   ![Home Page](https://github.com/Ngonyoku/PataMboka/blob/master/screenshots/home.png)
 
 2. Register and Login Pages
-   ![Register Page](/images/register-page.png)
-   ![Login Page](/images/login-page.png)
+   ![Register Page](https://github.com/Ngonyoku/PataMboka/blob/master/screenshots/register.png)
+   ![Login Page](https://github.com/Ngonyoku/PataMboka/blob/master/screenshots/login.png)
 
 3. Manage Listing Page
-   ![Manage Listing Page](/images/manage-listing-page.png)
+   ![Manage Listing Page](https://github.com/Ngonyoku/PataMboka/blob/master/screenshots/manage-listings.png)
 
 4. Create Listing Page
    ![Create Listing Page](/images/create-listing-page.png)
