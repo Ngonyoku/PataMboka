@@ -43,4 +43,9 @@ class Listing extends Model
             ; //Searches for the search query entered
         }
     }
+
+    # Eloquent Relationship
+    public function user() {
+        return $this->belongsTo(User::class, 'user_id'); # Listings belongs to a user and the FK is user_id
+    }
 }

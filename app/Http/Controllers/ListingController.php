@@ -11,10 +11,14 @@ class ListingController extends Controller
     // Show all Listings
     public function index() {
         // dd(request('tag')); # Die Dump function
+        // $listing = Listing::latest()
+        //             ->filter(request(['tag', 'search']))
+        //             ->simplePaginate(6)
+        // ; # Simple Pagination
         $listing = Listing::latest()
                     ->filter(request(['tag', 'search']))
-                    ->simplePaginate(6)
-        ; #
+                    ->paginate(6)
+        ; # Pagination
         return view('listings.index', [
             'listings' => $listing
         ]);
@@ -47,6 +51,9 @@ class ListingController extends Controller
         if ($request->hasFile('logo')) {
             $formFields['logo'] = $request->file('logo')->store('logos', 'public'); 
         }
+
+        # Add user Id to database
+        $formFields['user_id'] = auth()->id();
 
         Listing::create($formFields);
 
@@ -81,5 +88,9 @@ class ListingController extends Controller
     public function delete(Listing $listing) {
         $listing->delete();
         return redirect('/')->with('message', 'Successfully deleted listing');
+    }
+
+    public function manage() {
+        return view('listings.manage', ['listings' => auth()->user()->listings()->get()]);
     }
 }
