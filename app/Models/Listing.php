@@ -9,10 +9,18 @@ class Listing extends Model
 {
     use HasFactory;
 
-    // Is required for form submission
+    # Is required for form submission
     // protected $fillable = ['title', 'company', 'location', 'website', 'email', 'description', 'tags'];
+    /**
+     * The alternative to this is adding
+     * 
+     *    Model::unguard();
+     * 
+     * to the #boot method in the AppServiceProvider class located in app/providers dir
+     * 
+     */
 
-    // Filter By Tags
+    # Filter By Tags
     public function scopeFilter($query, array $filters) {
         if($filters['tag'] ?? false) { //If tag exists then proceed...
             $query->where('tags', 'like', '%' . request('tag') . '%'); //Searches for the tag entered

@@ -10,7 +10,7 @@
             <p class="mb-4">Post a job and get hires!</p>
         </header>
 
-        <form action="/listings" method="POST">
+        <form action="/listings" method="POST" enctype="multipart/form-data">
             @csrf
 
             {{-- Company --}}
@@ -24,6 +24,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="company"
+                    value="{{old('company')}}"
                 />
                 {{-- Output Errors --}}
                 @error('company')
@@ -43,6 +44,7 @@
                     class="border border-gray-200 rounded p-2 w-full"
                     name="title"
                     placeholder="Example: Senior Laravel Developer"
+                    value="{{old('title')}}"
                 />
                 {{-- Output Errors --}}
                 @error('title')
@@ -64,6 +66,7 @@
                     class="border border-gray-200 rounded p-2 w-full"
                     name="location"
                     placeholder="Example: Remote, Boston MA, etc"
+                    value="{{old('location')}}"
                 />
                 {{-- Output Errors --}}
                 @error('location')
@@ -82,6 +85,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="email"
+                    value="{{old('email')}}"
                 />
                 {{-- Output Errors --}}
                 @error('email')
@@ -103,6 +107,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="website"
+                    value="{{old('website')}}"
                 />
                 {{-- Output Errors --}}
                 @error('website')
@@ -131,6 +136,7 @@
                 @enderror
             </div>
 
+            {{-- Logo --}}
             <div class="mb-6">
                 <label for="logo" class="inline-block text-lg mb-2">
                     Company Logo
@@ -140,6 +146,12 @@
                     class="border border-gray-200 rounded p-2 w-full"
                     name="logo"
                 />
+                 {{-- Output Errors --}}
+                 @error('logo')
+                 <p class="text-red-500 text-xs mt-1">
+                     {{$message}}
+                 </p>
+             @enderror
             </div>
 
             {{-- Description --}}
@@ -155,6 +167,7 @@
                     name="description"
                     rows="10"
                     placeholder="Include tasks, requirements, salary, etc"
+                    value="{{old('description')}}"
                 ></textarea>
                 {{-- Output Errors --}}
                 @error('description')

@@ -11,7 +11,10 @@ class ListingController extends Controller
     // Show all Listings
     public function index() {
         // dd(request('tag')); # Die Dump function
-        $listing = Listing::latest()->filter(request(['tag', 'search']))->get(); #
+        $listing = Listing::latest()
+                    ->filter(request(['tag', 'search']))
+                    ->simplePaginate(6)
+        ; #
         return view('listings.index', [
             'listings' => $listing
         ]);
@@ -29,18 +32,19 @@ class ListingController extends Controller
 
      //Store form data
      public function store(Request $request) {
-        //Validates the Input from the form
+
         $formFields = $request->validate([
             'title' => 'required',
             'company' => ['required', Rule::unique('listings', 'company')],
             'location' => 'required',
             'website' => 'required',
-            'email' => ['required', 'email'], # The email must be formatted as an email
+            'email' => ['required', 'email'],
             'tags' => 'required',
             'description' => 'required'
         ]);
 
         Listing::create($formFields);
-        return redirect('/')->with('message', 'Listing Created Successfully!');
+
+        return redirect('/')->with('message', 'Successfully created listing');
     }
 }

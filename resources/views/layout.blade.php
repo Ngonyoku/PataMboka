@@ -47,8 +47,7 @@
             </ul>
         </nav>
 
-        {{-- Message Output --}}
-        <x-flash-message /> 
+        <x-flash-message />
 
         <main>
            {{-- VIEW OUTPUT --}}
